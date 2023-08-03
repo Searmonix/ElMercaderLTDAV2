@@ -141,7 +141,7 @@ form.addEventListener("submit", function(event) {
     console.log(dataObject);
 
     $.ajax({    
-        url: 'http://localhost:8080/api/gadget/new',
+        url: 'http://140.238.190.51:8080/api/gadget/new',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -178,7 +178,7 @@ $(document).ready(function() {
         document.getElementById("userRegistered").innerText = "Bienvenido " + sessionName;
     
         $.ajax({
-            url: 'http://localhost:8080/api/gadget/all',
+            url: 'http://140.238.190.51:8080/api/gadget/all',
             type: 'GET',
             dataType: 'json',
             success: function(response) {
@@ -226,7 +226,7 @@ function actualizarDatos(dataToEdit) {
 
 function eliminarDatos(id) {
     $.ajax({
-        url: 'http://localhost:8080/api/gadget/' + id,
+        url: 'http://140.238.190.51:8080/api/gadget/' + id,
         type: 'DELETE',
         dataType: 'json',
         success: function(response) {
